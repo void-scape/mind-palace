@@ -2,9 +2,9 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]  # or "master" depending on your default branch
+    branches: [ "master" ]  # or "master" depending on your default branch
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 env:
   CARGO_TERM_COLOR: always
@@ -29,7 +29,7 @@ jobs:
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'  # or master
+      if: github.ref == 'refs/heads/master'  # or master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
