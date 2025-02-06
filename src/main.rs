@@ -22,7 +22,7 @@ fn App() -> impl IntoView {
         <Router>
           <main>
             <Routes fallback=|| "Not found.">
-            <Route path=path!("/") view=|| MarkdownViewer/>
+            <Route path=path!("/mind-palace") view=|| MarkdownViewer/>
             //<Route path=path!("/users") view=Users/>
             //<Route path=path!("/users/:id") view=UserProfile/>
             <Route path=path!("/*any") view=|| view! { <h1>"Not Found"</h1> }/>
